@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KUBIK</title>
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="CSS/profil.css">
+
+  <!-- ========== NAVBAR STYLE ========== -->
+  <style>
+    /* ==================== NAVBAR ==================== */
+    .navbar {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%) scale(0.3);
+      background: white;
+      color: black;
+      border-radius: 40px;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transition: transform 0.6s ease, opacity 0.6s ease;
+      z-index: 1000;
+    }
+
+    .navbar.show {
+      transform: translateX(-50%) scale(1);
+      opacity: 1;
+    }
+
+    .logo img {
+      height: 35px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: black;
+      font-size: 14px;
+      padding: 6px 12px;
+      border-radius: 20px;
+      transition: background 0.3s;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      background: #ccc;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* ========== RESPONSIVE NAVBAR ========== */
+    @media (max-width: 992px) {
+      .navbar {
+        width: 90%;
+        justify-content: space-between;
+        padding: 10px 15px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: white;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .nav-link {
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .navbar {
+        width: 95%;
+        border-radius: 25px;
+      }
+
+      .logo img {
+        height: 28px;
+      }
+
+      .nav-link {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar" id="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="Asset/edit/60262f3d-ed38-4eb2-886f-c2066539ad0e.png" alt="Logo Kuliah Interior">
+      </a>
+    </div>
+
+    <div class="nav-links" id="nav-links">
+      <a href="index.html" class="nav-link">Beranda</a>
+      <a href="Profil.html" class="nav-link active">Profil</a>
+      <a href="Layanan.html" class="nav-link">Layanan</a>
+      <a href="#Kontak" class="nav-link">Kontak</a>
+    </div>
+
+    <!-- Hamburger -->
+    <div class="hamburger" id="hamburger">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </nav>
+
+  <!--ISINYA-->
+  <section class="hero">
+    <img src="Asset/rumah/ruang keluarga/IMG-20250912-WA0028.jpg" alt="Interior" class="hero-image" data-aos="fade-up" data-aos-delay="300">
+    <div class="brand-section">
+      <div class="logo-frame" data-aos="fade-right" data-aos-delay="200">
+        <img src="Asset/bahan/WhatsApp Image 2025-09-12 at 09.01.31.jpeg" alt="Logo Kubik">
+      </div>
+      <h2 data-aos="fade-left"><span>Kubik</span> Creative Design Interior</h2>
+    </div>
+  </section>
+  
+  <section class="about-section">
+    <div class="about-container">
+      <!-- Kolom Kiri: Galeri -->
+      <div class="about-gallery" data-aos="fade-right">
+        <img src="Asset/proses pengerjaan/IMG-20250912-WA0000.jpg" alt="Proyek 1" data-aos="zoom-in">
+        <img src="Asset/proses pengerjaan/IMG-20250912-WA0001.jpg" alt="Proyek 2" data-aos="zoom-in" data-aos-delay="100">
+        <img src="Asset/proses pengerjaan/IMG-20250912-WA0003.jpg" alt="Proyek 3" data-aos="zoom-in" data-aos-delay="200">
+        <img src="Asset/proses pengerjaan/IMG-20250912-WA0004.jpg" alt="Proyek 4" data-aos="zoom-in" data-aos-delay="300">
+        <img src="Asset/proses pengerjaan/IMG-20250912-WA0005.jpg" alt="Proyek 5" data-aos="zoom-in" data-aos-delay="400">
+        <img src="Asset/proses pengerjaan/IMG-20250912-WA0006.jpg" alt="Proyek 6" data-aos="zoom-in" data-aos-delay="500">
+      </div>
+
+      <!-- Kolom Kanan: Teks -->
+      <div class="about-text" data-aos="fade-left">
+        <h2>Kubik Design Interior: Desain & Inovasi Sejak 2013</h2>
+        <p>
+          Kubik Design Interior adalah studio desain interior yang telah mengukir reputasi solid selama lebih dari satu dekade. 
+          Sejak berdiri pada tahun 2013, kami telah membantu ratusan klien mewujudkan ruang impian mereka, baik untuk hunian pribadi, 
+          ruang komersial, maupun perkantoran.
+        </p>
+        <p>
+          Kami dikenal berkat perpaduan unik antara desain fungsional, estetika modern, dan perhatian mendalam terhadap detail. 
+          Dengan pengalaman lebih dari 10 tahun, tim profesional kami memahami tren terbaru, material berkualitas, dan solusi tata ruang yang cerdas.
+        </p>
+        <p>
+          Kami tidak hanya menciptakan ruangan yang indah, tetapi juga memastikan setiap desain efisien, nyaman, dan mencerminkan karakter unik dari setiap klien.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="visi reveal" data-aos="fade-up">
+    <h3>Visi Kami:</h3>
+    <p>
+      Membawa solusi desain interior yang tidak hanya indah secara visual, tetapi juga fungsional dan memberikan kenyamanan bagi penghuninya.
+    </p>
+  </section>
+
+  <section class="misi reveal" data-aos="fade-up" data-aos-delay="100">
+    <h3>Misi Kami:</h3>
+    <ol>
+      <li>Memberikan layanan desain interior profesional yang personal dan sesuai kebutuhan klien.</li>
+      <li>Menghadirkan desain dengan kualitas terbaik namun tetap menyesuaikan anggaran.</li>
+      <li>Menggunakan material ramah lingkungan dan berkelanjutan.</li>
+      <li>Menjadi partner terpercaya dalam setiap proyek interior, dari konsep hingga realisasi.</li>
+    </ol>
+  </section>
+
+  <!--FOOTER-->
+  <footer class="footer" data-aos="fade-in" data-aos-delay="100">
+    <div class="footer-top">
+      <a href="index.html" class="footer-logo">
+        <img src="Asset/edit/footer.png" alt="Kubik Logo">
+      </a>
+      <p class="footer-slogan">Siap Wujudkan Interior Impian Anda</p>
+      <a href="#kontak" class="footer-btn">Mulai Di Sini</a>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-col" id="Kontak">
+        <h4>Kubik Design Interior</h4>
+        <div class="contact-item"><i class="fa-solid fa-phone"></i><p>+62 817-164-128</p></div>
+        <div class="contact-item"><i class="fa-brands fa-instagram"></i><p>@kubik_designinterior</p></div>
+        <div class="contact-item"><i class="fa-brands fa-facebook"></i><p>kubik design interior</p></div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Portofolio</h4>
+        <a href="#">Semua Portofolio</a>
+        <a href="#">Kitchen Set</a>
+        <a href="#">Desain Interior Apartemen</a>
+        <a href="#">Desain Interior Rumah</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">Tentang Kami</a>
+        <a href="#">Help Center</a>
+        <a href="#">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="copyright">
+    <p class="textcr">© 2025 Kubik Creative Design Interior</p>
+  </div>
+
+  <!-- ========== NAVBAR SCRIPT ========== -->
+  <script>
+    // Animasi muncul navbar setelah load
+    window.addEventListener("load", () => {
+      const navbar = document.getElementById("navbar");
+      setTimeout(() => {
+        navbar.classList.add("show");
+      }, 300);
+    });
+
+    // Hamburger toggle
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+
+    // Tutup menu setelah klik link di mobile
+    document.querySelectorAll(".nav-link").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("show");
+      });
+    });
+  </script>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100
+    });
+  </script>
+
+  <script src="JS/script.js"></script>
+</body>
+</html>
