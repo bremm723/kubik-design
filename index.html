@@ -281,29 +281,29 @@
 
 
   <!-- ========== NAVBAR SCRIPT ========== -->
-  <script>
-    // Animasi muncul navbar setelah load
-    window.addEventListener("load", () => {
-      const navbar = document.getElementById("navbar");
-      setTimeout(() => {
-        navbar.classList.add("show");
-      }, 300);
+<script>
+  // Ambil elemen navbar dan hamburger
+  const navbar = document.getElementById("navbar");
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+
+  // Animasi muncul navbar setelah load
+  window.addEventListener("load", () => {
+    setTimeout(() => navbar.classList.add("show"), 300);
+  });
+
+  // Toggle menu saat hamburger diklik
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+
+  // Tutup menu setelah klik link di mobile
+  document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("show");
     });
-
-    // Hamburger toggle
-
-
-    hamburger.addEventListener("click", () => {
-      navLinks.classList.toggle("show");
-    });
-
-    // Tutup menu setelah klik link di mobile
-    document.querySelectorAll(".nav-link").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("show");
-      });
-    });
-  </script>
+  });
+</script>
 
   <!-- AOS JS -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -317,4 +317,5 @@
   <script src="JS/script.js"></script>
 </body>
 </html>
+
 
